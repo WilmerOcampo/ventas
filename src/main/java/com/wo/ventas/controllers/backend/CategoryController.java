@@ -16,7 +16,7 @@ import java.util.List;
 public class CategoryController {
     private final ICategoryService categoryService;
 
-    @GetMapping("all")
+    @GetMapping("/all")
     public String categories(Model model){
         List<Category> categories = categoryService.findAll();
         model.addAttribute("categories", categories);
