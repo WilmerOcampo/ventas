@@ -40,7 +40,10 @@ public class Employee {
     private String extension;
     @Column(name = "notes")
     private String notes;
+    @Column(name = "reportsto")
     private Integer reportsto;
+    @Column(name = "photopath")
     private String photopath;
+    @Column(name = "salary")
     private Double salary;
 }
