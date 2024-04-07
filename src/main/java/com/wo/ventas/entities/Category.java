@@ -1,10 +1,6 @@
 package com.wo.ventas.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotNull;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
@@ -12,8 +8,8 @@ import lombok.Data;
 @Data
 public class Category {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer categoryid;
-    @NotNull(message = "Obligatorio")
     private String categoryname;
     private String description;
 
